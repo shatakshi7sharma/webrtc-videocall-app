@@ -10,14 +10,23 @@
                     id="username-input" /><br>
             <button onclick="joinCall()">Join Call</button>
         </div>
-        <div id="video-call-div">
-            <video muted id="local-video" autoplay></video>
-            <video id="remote-video" autoplay></video>
-            <div class="call-action-div">
-                <button onclick="muteVideo()">Mute Video</button>
-                <button onclick="muteAudio()">Mute Audio</button>
+        <div style="display: flex; flex-direction: column;">
+            <div id="video-call-div" style="height: 200px;">
+                <video muted id="local-video" autoplay></video>
+                <video id="remote-video" autoplay></video>
+                <div class="call-action-div">
+                    <button onclick="muteVideo()">Mute Video</button>
+                    <button onclick="muteAudio()">Mute Audio</button>
+                </div>
+            </div>
+            <div style="border: 1px solid red; margin-top: 200px;">
+                <input placeholder="Enter msg..."
+                    type="text"
+                    id="msg-input" /><br>
+                <button onclick="sendMsg()">send mesg</button>
             </div>
         </div>
+    
         <script src="./receiver.js"></script>
     </body>
 
